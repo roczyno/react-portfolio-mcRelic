@@ -1,0 +1,40 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  color: white;
+  &.scrolled {
+    background-color: #fff;
+    .navList {
+      .navListItem {
+        a {
+          color: black;
+
+          &:hover {
+            color: #bac964;
+          }
+        }
+      }
+    }
+  }
+  .navbarWrapper {
+    padding: 20px;
+    .navList {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      .navListItem {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}

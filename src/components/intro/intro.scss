@@ -1,0 +1,69 @@
+.intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .introDesc {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .introIntro {
+      font-size: 70px;
+      font-weight: 300;
+    }
+    .introName {
+      font-size: 70px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .introTitle {
+      height: 50px;
+      overflow: hidden;
+      .introTitleWrapper {
+        height: 100%;
+        animation: move 10s ease-in-out infinite alternate;
+      }
+      @keyframes move {
+        25% {
+          transform: translateY(-50px);
+        }
+        50% {
+          transform: translateY(-100px);
+        }
+        75% {
+          transform: translateY(-150px);
+        }
+        100% {
+          transform: translateY(-200px);
+        }
+      }
+
+      .introTitleItem {
+        height: 50px;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        color: #bac964;
+      }
+    }
+  }
+}
